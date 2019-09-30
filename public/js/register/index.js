@@ -1,9 +1,3 @@
-const UNAME_VALID_CODE=  1;
-const UNAME_EXIST_CODE=  0;
-const UNAME_INVALID_CODE =-1;
-const UNAME_INVALID_MSG = "Hanya boleh kombinasi angka, huruf atau underscore";
-const UNAME_EXIST_MSG = "Username sudah digunakan";
-
 const validate = (input, id) => {
     
     if (input == "") {
