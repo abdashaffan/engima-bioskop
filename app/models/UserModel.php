@@ -115,28 +115,33 @@ class UserModel
 
     public function addNewUser($data)
     {
-        // $data['id'] = '';
-        $query =
+        $blob = fopen($data['profile_picture'], 'rb');
+        $this->db->query(
             "INSERT INTO {$this->table} (
                 username,
                 password,
                 email,
+                phone_num,
                 profile_picture,
-                phone_num   
+                mime
             ) VALUES
             (
                 :username,
                 :password,
                 :email,
+                :phone_num,
                 :profile_picture,
-                :phone_num
-            )";
-        $this->db->query($query);
+                :mime
+            )"
+        );
+        // die(print_r($data));
         $this->db->bind('username', $data["username"]);
         $this->db->bind('password', $data["password"]);
         $this->db->bind('email', $data["email"]);
-        $this->db->bind('profile_picture', $data["profile_picture"]);
         $this->db->bind('phone_num', $data["phone_num"]);
+        $this->db->bind('profile_picture', $blob);
+        $this->db->bind('mime', $data["mime"]);
+
         $this->db->execute();
 
         if ($this->db->rowCount() > 0) {
@@ -144,6 +149,7 @@ class UserModel
         }
         return $this->db->rowCount();
     }
+
     public function getCurrentUser()
     {
         return $_COOKIE['engima_user'];
