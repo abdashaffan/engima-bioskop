@@ -16,7 +16,7 @@ class HomeController extends Controller
             $this->redirect(BASE_URL . "/login");
         }
 
-        $data['judul'] = 'Home/index';
+        $data['judul'] = 'Engima - halaman utama';
         $data['css'] = $this->cssPath . "/style.css";
         $data['user_name'] = $this->model('User')->getCurrentUser();
         $data['films'] = $this->model('Film')->getAllCurrentFilm();

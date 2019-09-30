@@ -10,6 +10,7 @@ class SearchController extends Controller
 
     public function index()
     {
+        $data['judul'] = 'Engima - search';
         $data['css'] = $this->cssPath . "/style.css";
         $data['js'] = $this->jsPath . "/index.js";
         $this->view('templates/header', $data);

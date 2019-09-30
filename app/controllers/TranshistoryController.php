@@ -11,7 +11,7 @@ class TranshistoryController extends Controller
 
     public function index()
     {
-        $data['judul'] = 'Transhistory/index';
+        $data['judul'] = 'Engima - Transaction History';
         $data['css'] = $this->cssPath . "/style.css";
         $data['js'] = $this->jsPath . "/index.js";
         $data['user_ID'] = $this->model('User')->getUserID();

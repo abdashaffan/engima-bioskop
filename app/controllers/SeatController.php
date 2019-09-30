@@ -9,7 +9,7 @@ class SeatController extends Controller
 
     public function index($id)
     {
-        $data['judul'] = 'Seat/index';
+        $data['judul'] = 'Engima - Seats';
         $data['css'] = $this->cssPath . "/style.css";
         // TODO: Uncomment bawahnya
         $data['js'] = $this->jsPath . "/index.js";

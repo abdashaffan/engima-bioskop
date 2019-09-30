@@ -10,7 +10,7 @@ class LoginController extends Controller
         parent::__construct('login');
     }
 
-    public function index($valid='1')
+    public function index($valid = '1')
     {
 
         if ($this->model("User")->isRedirectedToHome()) {
@@ -24,7 +24,7 @@ class LoginController extends Controller
                 <span class='invalid' style='color:red;font-weight:bold;'>Invalid credentials</span>
             ";
         }
-        $data['judul'] = 'login/index';
+        $data['judul'] = 'Engima - Login';
         $data['css'] = $this->cssPath . "/style.css";
         $this->view('templates/header', $data);
         $this->view('login/index', $data);

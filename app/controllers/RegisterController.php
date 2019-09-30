@@ -34,7 +34,7 @@ class RegisterController extends Controller
             $this->model("User")->resetCookie();
         }
 
-        $data['judul'] = 'Register/index';
+        $data['judul'] = 'Engima - Register';
         $data['css'] = $this->cssPath . "/style.css";
         $data['js'] = $this->jsPath . "/index.js";
         $this->view('templates/header', $data);

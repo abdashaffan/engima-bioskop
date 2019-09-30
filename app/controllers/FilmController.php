@@ -9,10 +9,10 @@ class FilmController extends Controller
         parent::__construct('film');
     }
 
-    public function index($id=1)
+    public function index($id = 1)
     {
         // TODO: Change to parse id
-        $data['judul'] = 'Film/index';
+        $data['judul'] = 'Film kami';
         $data['css'] = $this->cssPath . "/style.css";
 
         $data['film'] = $this->model('Film')->getFilmById($id);
