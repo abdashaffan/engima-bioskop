@@ -51,7 +51,7 @@ const generateResultList = (resultList) => {
 
 
             <span class="film-details-link">
-                <a class="link detail-button" href=""+ ` +BASE_URL+ ` +"/film/`+film.film_id+`">view details
+                <a class="link detail-button" href="` +BASE_URL+ `/film/index/`+film.film_id+`">view details
                     <img src="` +BASE_URL+ `/assets/icon/right-arrow.svg" alt="view-details" class="svg-med">
                 </a>
             </span>
