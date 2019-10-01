@@ -9,7 +9,7 @@ class HomeController extends Controller
         parent::__construct('home');
     }
 
-    public function index($username = "")
+    public function index()
     {
 
         if (!$this->model("User")->isRedirectedToHome()) {
