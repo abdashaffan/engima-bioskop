@@ -58,3 +58,36 @@
   display:flex;
   justify-content: center;
 }
+
+.container {
+  text-align: center;
+}
+
+.pagination_wrapper {
+  display: inline-block;
+  clear: both; 
+  width: inherit;
+  height: inherit;
+  padding: .5em .8em;
+  border: 6px solid #2d9cdb;
+  margin: 2rem auto;
+}
+
+.film-wrapper {
+  text-align: left;
+  /* display: flex;
+  justify-content: flex-start; */
+}
+
+.pagination_link {
+  cursor:pointer;
+  color: #2d9cdb;
+  font-weight: bold;
+  padding: 10px 8px;
+}
+
+.pagination_link.disabled {
+  font-weight: normal;
+  cursor: not-allowed;
+  color: #333;
+}
