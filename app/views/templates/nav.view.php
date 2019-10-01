@@ -7,9 +7,10 @@
         </div>
         <div class="input-box">
             <!-- TODO: rapihin search icon -->
-            <form action="<?= BASE_URL; ?>/search" method="POST" class="form-navbar">
-                <input type="text" placeholder="Search movie" name="keyword" onkeyup="getSearchResult(this.value)">
-                <img class="svg-big" src="<?= BASE_URL; ?>/assets/icon/search-solid.svg" autocomplete=off>
+            <form action="<?= BASE_URL; ?>/search" method="POST" class="form-navbar" onsubmit="getSearchResult">
+                <input type=" text" placeholder="Search movie" name="keyword" autocomplete="off">
+                <img class=" svg-big" src="<?= BASE_URL; ?>/assets/icon/search-solid.svg" autocomplete=off
+                    style="cursor:pointer;">
                 <button type="submit" name="submit" hidden></button>
             </form>
         </div>

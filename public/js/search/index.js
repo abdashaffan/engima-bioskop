@@ -1,9 +1,12 @@
 
 
-const getSearchResult = (keyword="") => {
+const getSearchResult = () => {
+
+        let input = document.querySelector('.keyword').nodeValue;
+        console.log(input);
 
         document.querySelectorAll(".container").innerHTML = "";
-        if (keyword === ""){
+        if (input === ""){
             document.querySelector('.result-key').innerHTML = "";
             document.querySelector('.result-number').innerText = "0";
         }
@@ -19,7 +22,7 @@ const getSearchResult = (keyword="") => {
             }
         };
 
-        if (keyword !== "") {
+        if (input !== "") {
             xmlhttp.open("GET", BASE_URL + "/search/result?keyword=" + keyword, true);
             xmlhttp.send();
         }

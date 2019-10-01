@@ -13,8 +13,8 @@
              <?= count($initialResult); ?>
              <?php endif; ?>
          </span> result available</h2><br>
-     <?php if (isset($initialResult)) : ?>
      <div class="container">
+         <?php if (isset($initialResult)) : ?>
 
          <?php foreach ($initialResult as $movie) : ?>
          <div class="film-wrapper">
@@ -44,9 +44,9 @@
          </div>
          <hr>
          <?php endforeach; ?>
+         <?php endif; ?>
      </div>
-     <?php endif; ?>
-     <div class="container"></div>
+     <!-- <div class="container"></div> -->
 
 
  </div>
