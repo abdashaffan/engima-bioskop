@@ -10,6 +10,11 @@ class SearchController extends Controller
 
     public function index()
     {
+        if (isset($_POST['keyword'])) {
+            $data['keyword'] = $_POST['keyword'];
+            unset($_POST['keyword']);
+            $data['initialResult'] = $this->model("film")->getResult($data['keyword']);
+        }
         $data['judul'] = 'Engima - search';
         $data['css'] = $this->cssPath . "/style.css";
         $data['js'] = $this->jsPath . "/index.js";
