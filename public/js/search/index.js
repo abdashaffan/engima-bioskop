@@ -2,7 +2,7 @@
 
 const getSearchResult = (keyword="") => {
 
-        document.querySelector(".container").innerHTML = "";
+        document.querySelectorAll(".container").innerHTML = "";
         if (keyword === ""){
             document.querySelector('.result-key').innerHTML = "";
             document.querySelector('.result-number').innerText = "0";

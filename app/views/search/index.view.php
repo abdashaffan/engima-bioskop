@@ -14,34 +14,37 @@
              <?php endif; ?>
          </span> result available</h2><br>
      <?php if (isset($initialResult)) : ?>
-     <?php foreach ($initialResult as $movie) : ?>
-     <div class="film-wrapper">
+     <div class="container">
 
-         <div class="main-content">
+         <?php foreach ($initialResult as $movie) : ?>
+         <div class="film-wrapper">
 
-             <img src="<?= BASE_URL; ?>/assets/img/film/<?= $movie['thumbnail']; ?>" class="film-thumbnail">
+             <div class="main-content">
 
-             <div class="film-detail-wrapper">
-                 <span class="title"> <?= $movie['title']; ?></span><br>
-                 <span class="rating">
-                     <img src="<?= BASE_URL; ?>/assets/icon/star-solid.svg" alt="rating-star" class="svg-big">
-                     <?= $movie['rating']; ?>
-                 </span><br>
-                 <span class="sinopis">
-                     <?= $movie['sinopsis']; ?>
-                 </span><br>
+                 <img src="<?= BASE_URL; ?>/assets/img/film/<?= $movie['thumbnail']; ?>" class="film-thumbnail">
+
+                 <div class="film-detail-wrapper">
+                     <span class="title"> <?= $movie['title']; ?></span><br>
+                     <span class="rating">
+                         <img src="<?= BASE_URL; ?>/assets/icon/star-solid.svg" alt="rating-star" class="svg-big">
+                         <?= $movie['rating']; ?>
+                     </span><br>
+                     <span class="sinopis">
+                         <?= $movie['sinopsis']; ?>
+                     </span><br>
+                 </div>
              </div>
+
+
+             <span class="film-details-link">
+                 <a class="link detail-button" href="<?= BASE_URL; ?>/film/index/<?= $movie['film_id']; ?>">view details
+                     <img src="<?= BASE_URL; ?>/assets/icon/right-arrow.svg" alt="view-details" class="svg-med">
+                 </a>
+             </span>
          </div>
-
-
-         <span class="film-details-link">
-             <a class="link detail-button" href="<?= BASE_URL; ?>/film/index/<?= $movie['film_id']; ?>">view details
-                 <img src="<?= BASE_URL; ?>/assets/icon/right-arrow.svg" alt="view-details" class="svg-med">
-             </a>
-         </span>
+         <hr>
+         <?php endforeach; ?>
      </div>
-     <hr>
-     <?php endforeach; ?>
      <?php endif; ?>
      <div class="container"></div>
 
