@@ -104,10 +104,12 @@
                             </b>
                             <div class='rating'>
                                 <h3>
-                                    <?php echo '<img class="svg-small" src="' . BASE_URL . '/assets/icon/star-solid.svg">' ?>
+                                    <<<<<<< HEAD
+                                        <?php echo '<img class="svg-small" src="' . BASE_URL . '/assets/icon/star-solid.svg">' ?>=======<?php echo '<img class="svg-small" src="' . BASE_URL . '"/assets/icon/star-solid.svg">' ?>>
+                                        >>>>>> e97a7aef2c8e0e6e9171cfc82354f15bf233329d
 
-                                    <?php echo $reviews[$i]['rating'] ?>
-                                    <span>/10</span>
+                                        <?php echo $reviews[$i]['rating'] ?>
+                                        <span>/10</span>
                                 </h3>
                             </div>
                             <p>
