@@ -1,3 +1,6 @@
+const  scrollWin = () => {
+    window.scrollTo(500, 0);
+  }
 const loadData = (page=1) => {
     let keyword = document.querySelector('.keyword').value;
     let xmlhttp = new XMLHttpRequest();

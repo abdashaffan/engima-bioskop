@@ -110,7 +110,7 @@ class FilmModel
             if ($i == $pageNum) {
                 $output .= "<span class='pagination_link disabled' id='" . $i . "' disabled >" . $i . "</span>";
             } else {
-                $output .= "<span class='pagination_link' id='" . $i . "' onClick='loadData(" . $i . ")'>" . $i . "</span>";
+                $output .= "<span class='pagination_link' id='" . $i . "' onClick='loadData(" . $i . ");scrollWin()'>" . $i . "</span>";
             }
         }
         $output .= '</span>';
