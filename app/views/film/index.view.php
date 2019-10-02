@@ -1,6 +1,6 @@
 <div class="film">
     <div class="film-detail">
-        <?php echo "<img class='film-image-big' src='".BASE_URL."/assets/img/film/" . $film['thumbnail'] . "'>"; ?>
+        <?php echo "<img class='film-image-big' src='" . BASE_URL . "/assets/img/film/" . $film['thumbnail'] . "'>"; ?>
         <div class="film-detail-desc">
 
             <h2><?php echo $film['title']; ?></h2>
@@ -10,7 +10,7 @@
             </b>
             <div class='rating'>
                 <h3>
-                    <?php echo '<img class="svg-big" src="'.BASE_URL.'/assets/icon/star-solid.svg">' ?>
+                    <?php echo '<img class="svg-big" src="' . BASE_URL . '/assets/icon/star-solid.svg">' ?>
                     <?php echo $film['rating']; ?>
                     <span>/10</span>
                 </h3>
@@ -74,14 +74,14 @@
                                     echo '
                                         <td class="table-state not-available">
                                             Not Available 
-                                            <img class="svg-med" src="'.BASE_URL.'/assets/icon/times-circle-solid.svg">
+                                            <img class="svg-med" src="' . BASE_URL . '/assets/icon/times-circle-solid.svg">
                                         </td>';
                                 } else {
                                     echo '
                                         <td class="table-state available">
-                                            <a href="'.BASE_URL.'/seat/index/'.$schedule['schedule_id'].'">
+                                            <a href="' . BASE_URL . '/seat/index/' . $schedule['schedule_id'] . '">
                                                 Book Now 
-                                                <img class="svg-med" src="'.BASE_URL.'/assets/icon/right-arrow.svg">
+                                                <img class="svg-med" src="' . BASE_URL . '/assets/icon/right-arrow.svg">
                                             </a>
                                         </td>';
                                 }
@@ -97,15 +97,15 @@
                 <div class="review-detail">
                     <?php for ($i = 0; $i < count($reviews) - 1; $i++) : ?>
                     <div>
-                        <?php echo "<img class='review-user' class='review-user' src='".BASE_URL."/assets/img/user/" . $reviews[$i]['profile_picture'] . "'>" ?>
+                        <?php echo "<img class='review-user' class='review-user' src='data:" . $reviews[$n - 1]['mime'] . ";base64," . base64_encode($reviews[$n - 1]['profile_picture']) . "'>" ?>
                         <div>
                             <b>
                                 <p><?php echo $reviews[$i]['username'] ?></p>
                             </b>
                             <div class='rating'>
                                 <h3>
-                                    <?php echo '<img class="svg-small" src="'.BASE_URL.'"/assets/icon/star-solid.svg">' ?>
-                                    
+                                    <?php echo '<img class="svg-small" src="' . BASE_URL . '"/assets/icon/star-solid.svg">' ?>
+
                                     <?php echo $reviews[$i]['rating'] ?>
                                     <span>/10</span>
                                 </h3>
@@ -125,12 +125,12 @@
 
                         echo "
                                 <div class='review-last'>
-                                    <img class='review-user' src='".BASE_URL."/assets/img/user/" . $reviews[$n - 1]['profile_picture'] . "'>
+                                    <img class='review-user' src='data:" . $reviews[$n - 1]['mime'] . ";base64," . base64_encode($reviews[$n - 1]['profile_picture']) . "'>
                                     <div>
                                         <b><p>" . $reviews[$n - 1]['username'] . "</p></b>
                                         <div class='rating'>
                                             <h3>
-                                                <img class='svg-small' src='".BASE_URL."/assets/icon/star-solid.svg'>"
+                                                <img class='svg-small' src='" . BASE_URL . "/assets/icon/star-solid.svg'>"
                             . $reviews[$n - 1]['rating'] .
                             "<span>/10</span>
                                             </h3>

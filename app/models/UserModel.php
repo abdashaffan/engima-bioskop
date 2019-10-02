@@ -139,7 +139,7 @@ class UserModel
         $this->db->bind('password', $data["password"]);
         $this->db->bind('email', $data["email"]);
         $this->db->bind('phone_num', $data["phone_num"]);
-        $this->db->bind('profile_picture', $blob);
+        $this->db->bind(':profile_picture', $blob);
         $this->db->bind('mime', $data["mime"]);
 
         $this->db->execute();

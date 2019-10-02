@@ -102,7 +102,7 @@ class ReviewModel
     public function getAllReviewAndUserByFilmId($id)
     {
         $this->db->query(
-            "SELECT comment, rating, username, profile_picture FROM review NATURAL JOIN user WHERE film_id={$id}"
+            "SELECT comment, rating, username, profile_picture, mime FROM review NATURAL JOIN user WHERE film_id={$id}"
         );
         return $this->db->resultSet();
     }
