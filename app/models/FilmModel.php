@@ -102,6 +102,9 @@ class FilmModel
         $this->db->bind('title', '%' . $keyword . '%');
         $totalRecords = sizeof($this->db->resultset());
         $totalPages = ceil($totalRecords / RECORD_PER_PAGE);
+        if ($totalPages <= 1) {
+            return $output;
+        }
         $output .= '<span class="pagination_wrapper">';
         for ($i = 1; $i <= $totalPages; $i++) {
             if ($i == $pageNum) {
