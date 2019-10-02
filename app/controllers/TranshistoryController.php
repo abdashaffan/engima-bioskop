@@ -16,6 +16,7 @@ class TranshistoryController extends Controller
         $data['js'] = $this->jsPath . "/index.js";
         $data['user_ID'] = $this->model('User')->getUserID();
         $data['transactions'] = $this->model('Transaction')->getAllUserTransaction($data['user_ID']['user_id']);
+        // die(var_dump($data['transactions']));
         $this->view('templates/header', $data);
         $this->view('templates/nav');
         $this->view('templates/layout');
